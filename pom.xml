@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>9</version>
+  </parent>
+
+  <artifactId>sitemeshpageparser</artifactId>
+  <groupId>com.paulhammant.sitemeshpageparser</groupId>
+  <version>2.5a11-SNAPSHOT</version>
+
+  <name>sitemeshpageparser</name>
+  <inceptionYear>2001</inceptionYear>
+  <description>Sitemesh's Page Parser forked from opensymphony:sitemesh:2.5-atlassian-11</description>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <licenses>
+    <license>
+      <name>BSD</name>
+      <url>LICENSE.txt</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git://github.com/paul-hammant/sitemeshpageparser.git</connection>
+    <developerConnection>scm:git:git@github.com:paul-hammant/sitemeshpageparser.git</developerConnection>
+    <url>https://github.com/paul-hammant/sitemeshpageparser</url>
+    <tag>HEAD</tag>
+  </scm>
+
+</project>

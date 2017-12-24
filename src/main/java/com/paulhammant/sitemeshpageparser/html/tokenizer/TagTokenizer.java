@@ -1,0 +1,44 @@
+package com.paulhammant.sitemeshpageparser.html.tokenizer;
+
+import com.paulhammant.sitemeshpageparser.parser.HTMLPageParser;
+
+/**
+ * Splits a chunk of HTML into 'text' and 'tag' tokens, for easy processing. Is VERY tolerant to badly formed HTML.
+ * <p/>
+ * <h3>Usage</h3>
+ * <p/>
+ * You need to supply a custom {@link TokenHandler} that will receive callbacks as text and tags are processed.
+ * <p/>
+ * <pre>char[] input = ...;
+ * HTMLTagTokenizer tokenizer = new HTMLTagTokenizer(input);
+ * TokenHandler handler = new MyTokenHandler();
+ * tokenizer.start(handler);</pre>
+ *
+ * @author Joe Walnes
+ * @see TokenHandler
+ * @see HTMLPageParser
+ */
+public class TagTokenizer {
+
+    private final char[] input;
+    private final int length;
+
+    public TagTokenizer(char[] input) {
+        this(input, input.length);
+    }
+
+    public TagTokenizer(char[] input, int length) {
+        this.input = input;
+        this.length = length;
+    }
+
+    public TagTokenizer(String input) {
+        this(input.toCharArray());
+    }
+
+    public void start(TokenHandler handler) {
+        Parser parser = new Parser(input, length, handler);
+        parser.start();
+    }
+
+}
